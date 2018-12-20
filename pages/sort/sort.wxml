@@ -1,0 +1,48 @@
+
+
+<view class='wrapper'>
+  <view class='textarea placeholder'>
+    <textarea placeholder='说点什么' placeholder-class='placeholder' auto-height maxlength='300' bindinput='onTextChange'>
+    </textarea>
+  </view>
+
+  <movable-area class='movable-area'>
+    <movable-view 
+      wx:for="{{imgSrcs}}" 
+      wx:key="{{index}}"
+      class='wrapper-image ' 
+      style='z-index:{{(currentTouchIndex==index)?99:0}};'
+      x="{{reallyPositons[index].x}}rpx" 
+      y="{{reallyPositons[index].y}}rpx" 
+      direction="all" 
+      animation="{{animation}}" 
+      out-of-bounds="{{false}}" 
+      bindchange="_onImgMove" 
+      bindtouchend='_onTouchEnd'
+      data-index='{{index}}' >
+      <image 
+        class='image' 
+        mode='aspectFill' 
+        src='{{item}}' 
+        bindtap='_previewImage' 
+        data-index='{{index}}' 
+        data-images="{{imgSrcs}}" />
+      <image 
+        class='close-image' 
+        src='/images/close-image.png' 
+        bindtap='_removeOnePicture' 
+        data-index='{{index}}' />
+    </movable-view>
+    <movable-view 
+      wx:if="{{showAdd}}"
+      class='add' 
+      style='top:{{standardPositions[imgSrcs.length].y}}rpx;left:{{standardPositions[imgSrcs.length].x}}rpx' 
+      bindtap='_onTappedAddPicture' >
+      <view class='line1' />
+      <view class='line2' />
+    </movable-view>
+  </movable-area>
+
+</view>
+
+<button catchtap='onSendTap'>发布</button>

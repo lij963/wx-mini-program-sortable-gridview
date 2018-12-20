@@ -1,0 +1,98 @@
+
+
+.wrapper {
+  margin: 40rpx;
+  border-radius: 10rpx;
+  padding: 0 30rpx 30rpx 30rpx;
+  background: white;
+}
+
+.placeholder {
+  color: #999;
+  letter-spacing: 0;
+  line-height: 40rpx;
+  font-size: 32rpx;
+}
+
+.textarea {
+  /* background: red; */
+  min-height: 150rpx;
+  color: #444;
+  font-size: 32rpx;
+}
+
+.textarea textarea {
+  width: 100%;
+  padding: 30rpx 0;
+}
+
+.movable-area {
+  width: 610rpx;
+  height: 610rpx;
+
+}
+.margin-20rpx {
+  margin-right: 20rpx;
+}
+
+.add {
+  width: 190rpx;
+  height: 190rpx;
+  background: #eee;
+  border-radius: 12rpx;
+  /* position: relative; */
+}
+
+.line1 {
+  position: absolute;
+  width: 2px;
+  height: 62rpx;
+  background: white;
+  top: 68rpx;
+  left: 50%;
+}
+
+.line2 {
+  position: absolute;
+  height: 2px;
+  width: 63rpx;
+  background: white;
+  top: 50%;
+  left: 65rpx;
+}
+
+.wrapper-image {
+  /* position: relative; */
+  width: 190rpx;
+  height: 190rpx;
+}
+
+.image {
+  width: 190rpx;
+  height: 190rpx;
+   border: solid 1rpx black;
+  border-radius: 12rpx;
+}
+
+.close-image {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10rpx 10rpx 20rpx 20rpx;
+}
+
+button {
+  width: 670rpx;
+  height: 100rpx;
+  background: #336;
+  border-radius: 12rpx;
+  font-size: 32rpx;
+  color: #fff;
+  line-height: 100rpx;
+}
+
+button::after {
+  border: 0;
+}
